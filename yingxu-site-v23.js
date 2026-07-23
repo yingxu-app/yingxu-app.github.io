@@ -37,4 +37,12 @@
       });
     }, 0);
   });
+
+  // The homepage uses a language dropdown rather than the shared child-page button.
+  // Mirror its visible choices into the same persistent key after its own handler runs.
+  document.addEventListener('click', (event) => {
+    const label = (event.target.textContent || '').trim();
+    if (label === 'English') window.setTimeout(() => storeLanguage('en'), 0);
+    if (label === '中文') window.setTimeout(() => storeLanguage('zh'), 0);
+  });
 })();
