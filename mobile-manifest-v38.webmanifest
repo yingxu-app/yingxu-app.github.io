@@ -1,0 +1,13 @@
+{
+  "name": "影序 Pocket",
+  "short_name": "影序 Pocket",
+  "description": "影序的移动素材清单与桌面端配对工具；不承诺浏览器后台复制原始素材。",
+  "start_url": "./mobile-v38.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0e10",
+  "theme_color": "#0b0e10",
+  "icons": [
+    { "src": "yingxu-pwa-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
