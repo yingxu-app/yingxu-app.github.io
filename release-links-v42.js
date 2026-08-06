@@ -1,9 +1,9 @@
-/* v42 is the single public release-link authority. Older visual pages remain
-   available as rollback copies. v1.0.31 is the verified public macOS release. */
+/* v43 domestic-download rollout. The verified installer is served from the
+   public site itself for China-friendly access; GitHub remains source/backup. */
 (() => {
   const stableVersion = '1.0.31';
   const stableSha256 = '6ba459330c5537498bd77300ad983d3cf2de6d844b2add752a90a0e357a18707';
-  const releaseUrl = `https://github.com/luguanlin20050927/smart-media-backup/releases/download/v${stableVersion}/YINGXU-macOS-v${stableVersion}.dmg`;
+  const releaseUrl = `download/v${stableVersion}/YINGXU-macOS-v${stableVersion}.dmg`;
 
   document.querySelectorAll('a[href]').forEach((link) => {
     const raw = link.getAttribute('href') || '';

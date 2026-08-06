@@ -41,7 +41,7 @@ h1 span{background:linear-gradient(165deg,var(--brand),var(--cyan));-webkit-back
 .footer a{color:var(--brand)}
 @media(max-width:800px){.grid3{grid-template-columns:1fr}h1{font-size:36px}}
 </style>
-<script src="release-links-v42.js" defer></script>
+<script src="release-links-v43.js" defer></script>
 <script src="yingxu-site-v42.js"></script>
 </head>
 <body>
@@ -73,7 +73,9 @@ h1 span{background:linear-gradient(165deg,var(--brand),var(--cyan));-webkit-back
 <div class="grid3">
 <article class="card" id="macos"><strong>macOS</strong>
 <p data-i18n="dl.macos">v1.0.31 · Apple Silicon 公开版。已通过 20 项可靠性回归、应用签名检查和 DMG 完整性校验。</p>
-<a class="btn primary" href="https://github.com/luguanlin20050927/smart-media-backup/releases/download/v1.0.31/YINGXU-macOS-v1.0.31.dmg" data-i18n="dl.mbtn">下载 macOS .dmg</a>
+<a class="btn primary" href="download/v1.0.31/YINGXU-macOS-v1.0.31.dmg" data-i18n="dl.mbtn">国内网络下载 macOS .dmg</a>
+<p style="margin:14px 0 0;color:#91a0ad;font-size:14px">默认从影序官网直链下载，不需要连接 VPN；GitHub Release 仅作为海外/源码备用。</p>
+<a class="btn" style="margin-top:12px" href="https://github.com/luguanlin20050927/smart-media-backup/releases/download/v1.0.31/YINGXU-macOS-v1.0.31.dmg" target="_blank" rel="noopener noreferrer">GitHub 备用下载</a>
 </article>
 <article class="card" id="windows"><strong>Windows</strong>
 <p data-i18n="dl.windows">Windows 代码与打包配置已准备，但正式 .exe 仍需在 Windows 环境构建与验证。为避免误导，当前不提供下载。</p>
@@ -92,7 +94,7 @@ h1 span{background:linear-gradient(165deg,var(--brand),var(--cyan));-webkit-back
 <div class="section-note" data-i18n="install.note">如果被系统拦截，按以下步骤操作即可。</div>
 </div>
 <div class="grid3">
-<article class="card"><strong>macOS</strong><p data-i18n="install.macos">打开 .zip，将「影序 YINGXU」拖入 Applications。首次打开如被拦截，在「系统设置 → 隐私与安全性」选择仍要打开。</p></article>
+<article class="card"><strong>macOS</strong><p data-i18n="install.macos">打开 .dmg，将「影序 YINGXU」拖入 Applications。首次打开如被拦截，在「系统设置 → 隐私与安全性」选择仍要打开。</p></article>
 <article class="card"><strong>SHA-256</strong><p><span data-release-sha>6ba459330c5537498bd77300ad983d3cf2de6d844b2add752a90a0e357a18707</span><br><br>在终端运行 <code>shasum -a 256 文件名.dmg</code>，结果必须一致。</p></article>
 <article class="card"><strong>反馈与开源</strong><p>代码遵循 MIT 协议。公开建议可提交 GitHub Issue；需要直接联系时，请邮件至 luguanlin20050927@iCloud.com。</p></article>
 </div>
@@ -104,7 +106,7 @@ h1 span{background:linear-gradient(165deg,var(--brand),var(--cyan));-webkit-back
 </div></footer>
 
 <script>
-const macReleaseUrl = 'https://github.com/luguanlin20050927/smart-media-backup/releases/download/v1.0.31/YINGXU-macOS-v1.0.31.dmg';
+const macReleaseUrl = 'download/v1.0.31/YINGXU-macOS-v1.0.31.dmg';
 document.querySelectorAll('a[href^="releases/"]').forEach(link => { link.href = macReleaseUrl; });
 const i18n = {
   'zh': {
@@ -114,13 +116,13 @@ const i18n = {
     'btn.macos':'macOS','btn.windows':'Windows 状态','btn.github':'GitHub',
     'dl.title':'下载入口','dl.note':'下载前后需要的信息都在这里：安装包、完整性校验、源码与发布状态。',
     'dl.macos':'v1.0.31 · Apple Silicon 公开版。已通过 20 项可靠性回归、应用签名检查和 DMG 完整性校验。',
-    'dl.mbtn':'下载 macOS .dmg',
+    'dl.mbtn':'国内网络下载 macOS .dmg',
     'dl.windows':'Windows 代码与打包配置已准备，但正式 .exe 仍需在 Windows 环境构建与验证。当前不提供下载。',
     'dl.wbtn':'申请内测通知',
     'dl.github':'查看源码、问题讨论与后续发布记录。欢迎用 Issue 提交可公开讨论的建议。',
     'dl.ghbtn':'打开项目仓库',
     'install.title':'安装指引','install.note':'如果被系统拦截，按以下步骤操作即可。',
-    'install.macos':'打开 .zip，将「影序 YINGXU」拖入 Applications。首次打开如被拦截，在「系统设置 → 隐私与安全性」选择仍要打开。',
+    'install.macos':'打开 .dmg，将「影序 YINGXU」拖入 Applications。首次打开如被拦截，在「系统设置 → 隐私与安全性」选择仍要打开。',
     'install.windows':'公开建议可提交 GitHub Issue；需要直接联系时，请邮件至 luguanlin20050927@iCloud.com。',
     'install.mit':'代码完全开源，任何人都可以审计、修改、二次分发。',
     'footer.brand':'Smart Media Backup','footer.home':'返回主页'
