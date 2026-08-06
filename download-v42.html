@@ -74,8 +74,8 @@ h1 span{background:linear-gradient(165deg,var(--brand),var(--cyan));-webkit-back
 <article class="card" id="macos"><strong>macOS</strong>
 <p data-i18n="dl.macos">v1.0.31 · Apple Silicon 公开版。已通过 20 项可靠性回归、应用签名检查和 DMG 完整性校验。</p>
 <a class="btn primary" href="download/v1.0.31/YINGXU-macOS-v1.0.31.dmg" data-i18n="dl.mbtn">国内网络下载 macOS .dmg</a>
-<p style="margin:14px 0 0;color:#91a0ad;font-size:14px">默认从影序官网直链下载，不需要连接 VPN；GitHub Release 仅作为海外/源码备用。</p>
-<a class="btn" style="margin-top:12px" href="https://github.com/luguanlin20050927/smart-media-backup/releases/download/v1.0.31/YINGXU-macOS-v1.0.31.dmg" target="_blank" rel="noopener noreferrer">GitHub 备用下载</a>
+<p style="margin:14px 0 0;color:#91a0ad;font-size:14px" data-i18n="dl.domestic-note">默认从影序官网直链下载，不需要连接 VPN；GitHub Release 仅作为海外/源码备用。</p>
+<a class="btn" style="margin-top:12px" href="https://github.com/luguanlin20050927/smart-media-backup/releases/download/v1.0.31/YINGXU-macOS-v1.0.31.dmg" target="_blank" rel="noopener noreferrer" data-i18n="dl.github-backup">GitHub 备用下载</a>
 </article>
 <article class="card" id="windows"><strong>Windows</strong>
 <p data-i18n="dl.windows">Windows 代码与打包配置已准备，但正式 .exe 仍需在 Windows 环境构建与验证。为避免误导，当前不提供下载。</p>
@@ -117,6 +117,7 @@ const i18n = {
     'dl.title':'下载入口','dl.note':'下载前后需要的信息都在这里：安装包、完整性校验、源码与发布状态。',
     'dl.macos':'v1.0.31 · Apple Silicon 公开版。已通过 20 项可靠性回归、应用签名检查和 DMG 完整性校验。',
     'dl.mbtn':'国内网络下载 macOS .dmg',
+    'dl.domestic-note':'默认从影序官网直链下载，不需要连接 VPN；GitHub Release 仅作为海外/源码备用。','dl.github-backup':'GitHub 备用下载',
     'dl.windows':'Windows 代码与打包配置已准备，但正式 .exe 仍需在 Windows 环境构建与验证。当前不提供下载。',
     'dl.wbtn':'申请内测通知',
     'dl.github':'查看源码、问题讨论与后续发布记录。欢迎用 Issue 提交可公开讨论的建议。',
@@ -135,12 +136,13 @@ const i18n = {
     'dl.title':'Downloads','dl.note':'Everything around the download lives here: installer, integrity check, source, and release status.',
     'dl.macos':'v1.0.31 is the public Apple Silicon build, validated by twenty reliability regressions, an app-signature check, and DMG integrity verification.',
     'dl.mbtn':'Download macOS .dmg',
+    'dl.domestic-note':'The official-site link is the default download route. GitHub Release remains an overseas and source-code fallback.','dl.github-backup':'GitHub fallback download',
     'dl.windows':'Windows code and packaging are ready, but the final .exe still needs a Windows build and verification. No download is offered yet.',
     'dl.wbtn':'Request beta notice',
     'dl.github':'Browse source, discussions, and future release notes. Use Issues for public feedback.',
     'dl.ghbtn':'Open repository',
     'install.title':'Install Guide','install.note':'If blocked by your system, follow these steps.',
-    'install.macos':'Open the .zip and drag YINGXU to Applications. If Gatekeeper warns you, use System Settings → Privacy & Security → Open Anyway.',
+    'install.macos':'Open the .dmg and drag YINGXU to Applications. If Gatekeeper warns you, use System Settings → Privacy & Security → Open Anyway.',
     'install.windows':'Use a GitHub Issue for public feedback or email luguanlin20050927@iCloud.com for direct contact.',
     'install.mit':'Fully open source under MIT. Anyone can audit, modify, and redistribute.',
     'footer.brand':'Smart Media Backup','footer.home':'Back to Home'
