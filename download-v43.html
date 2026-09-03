@@ -78,8 +78,9 @@ h1 span{background:linear-gradient(165deg,var(--brand),var(--cyan));-webkit-back
 <a class="btn" style="margin-top:12px" href="https://github.com/luguanlin20050927/smart-media-backup/releases/download/v1.0.31/YINGXU-macOS-v1.0.31.dmg" target="_blank" rel="noopener noreferrer" data-i18n="dl.github-backup">GitHub 备用下载</a>
 </article>
 <article class="card" id="windows"><strong>Windows</strong>
-<p data-i18n="dl.windows">Windows 代码与打包配置已准备，但正式 .exe 仍需在 Windows 环境构建与验证。为避免误导，当前不提供下载。</p>
-<a class="btn" href="mailto:luguanlin20050927@iCloud.com?subject=%E5%BD%B1%E5%BA%8F%20Windows%20%E5%86%85%E6%B5%8B" data-i18n="dl.wbtn">申请内测通知</a>
+<p data-i18n="dl.windows">Windows 10+ 桌面端 v1.0.33：插卡识别、项目归档、SHA-256 校验与历史记录。未签名 exe，首次运行请点「更多信息」→「仍要运行」。</p>
+<a class="btn primary" href="download/v1.0.33/YINGXU-Windows-v1.0.33.exe" data-i18n="dl.wbtn-cn">国内网络下载 Windows .exe</a>
+<a class="btn" style="margin-top:12px" href="https://github.com/yingxu-app/smart-media-backup/releases/download/v1.0.33/YINGXU-Windows-v1.0.33.exe" target="_blank" rel="noopener noreferrer" data-i18n="dl.wbtn-gh">GitHub 备用下载</a>
 </article>
 <article class="card"><strong>GitHub</strong>
 <p data-i18n="dl.github">查看源码、问题讨论与后续发布记录。欢迎用 Issue 提交可公开讨论的建议。</p>
@@ -95,7 +96,8 @@ h1 span{background:linear-gradient(165deg,var(--brand),var(--cyan));-webkit-back
 </div>
 <div class="grid3">
 <article class="card"><strong>macOS</strong><p data-i18n="install.macos">打开 .dmg，将「影序 YINGXU」拖入 Applications。首次打开如被拦截，在「系统设置 → 隐私与安全性」选择仍要打开。</p></article>
-<article class="card"><strong>SHA-256</strong><p><span data-release-sha>6ba459330c5537498bd77300ad983d3cf2de6d844b2add752a90a0e357a18707</span><br><br>在终端运行 <code>shasum -a 256 文件名.dmg</code>，结果必须一致。</p></article>
+<article class="card"><strong>Windows</strong><p data-i18n="install.windows">双击 .exe 运行；如被 SmartScreen 拦截，点「更多信息」→「仍要运行」。校验：Get-FileHash -Algorithm SHA256 文件.exe</p></article>
+<article class="card"><strong>SHA-256</strong><p>macOS <span data-release-sha>6ba459330c5537498bd77300ad983d3cf2de6d844b2add752a90a0e357a18707</span><br><br>Windows c1bbd85aa6da319992452ec4ed0d56176bcea83b20087e763a98548810239758<br><br>在终端运行 <code>shasum -a 256 文件名</code>，结果必须一致。</p></article>
 <article class="card"><strong>反馈与开源</strong><p>代码遵循 MIT 协议。公开建议可提交 GitHub Issue；需要直接联系时，请邮件至 luguanlin20050927@iCloud.com。</p></article>
 </div>
 </div></section>
@@ -112,38 +114,40 @@ const i18n = {
   'zh': {
     'nav.home':'主页','nav.guide':'导览',
     'hero.kicker':'免费下载','hero.title':'选好平台，<br><span style="background:linear-gradient(95deg,#8bf5ab 8%,#4ade80 42%,#4fd8ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">直接开始</span>',
-    'hero.desc':'macOS 正式包已经可用。下载、安装、校验与反馈都在这一页说清楚；未完成验证的平台不会提供虚假入口。',
+    'hero.desc':'macOS 与 Windows 正式包均已可用。下载、安装、校验与反馈都在这一页说清楚；未完成验证的平台不会提供虚假入口。',
     'btn.macos':'macOS','btn.windows':'Windows 状态','btn.github':'GitHub',
     'dl.title':'下载入口','dl.note':'下载前后需要的信息都在这里：安装包、完整性校验、源码与发布状态。',
     'dl.macos':'v1.0.31 · Apple Silicon 公开版。已通过 20 项可靠性回归、应用签名检查和 DMG 完整性校验。',
     'dl.mbtn':'国内网络下载 macOS .dmg',
     'dl.domestic-note':'默认从影序官网直链下载，不需要连接 VPN；GitHub Release 仅作为海外/源码备用。','dl.github-backup':'GitHub 备用下载',
-    'dl.windows':'Windows 代码与打包配置已准备，但正式 .exe 仍需在 Windows 环境构建与验证。当前不提供下载。',
-    'dl.wbtn':'申请内测通知',
+    'dl.windows':'Windows 10+ 桌面端 v1.0.33 已可下载：插卡识别、项目归档、SHA-256 校验与历史记录。未签名 exe，首次运行请点「更多信息」→「仍要运行」。',
+    'dl.wbtn-cn':'国内网络下载 Windows .exe',
+    'dl.wbtn-gh':'GitHub 备用下载',
     'dl.github':'查看源码、问题讨论与后续发布记录。欢迎用 Issue 提交可公开讨论的建议。',
     'dl.ghbtn':'打开项目仓库',
     'install.title':'安装指引','install.note':'如果被系统拦截，按以下步骤操作即可。',
     'install.macos':'打开 .dmg，将「影序 YINGXU」拖入 Applications。首次打开如被拦截，在「系统设置 → 隐私与安全性」选择仍要打开。',
-    'install.windows':'公开建议可提交 GitHub Issue；需要直接联系时，请邮件至 luguanlin20050927@iCloud.com。',
+    'install.windows':'双击 .exe 运行；如被 SmartScreen 拦截，点「更多信息」→「仍要运行」。可运行 Get-FileHash -Algorithm SHA256 校验完整性。',
     'install.mit':'代码完全开源，任何人都可以审计、修改、二次分发。',
     'footer.brand':'Smart Media Backup','footer.home':'返回主页'
   },
   'en': {
     'nav.home':'Home','nav.guide':'Guide',
     'hero.kicker':'Free Download','hero.title':'Pick your platform,<br><span style="background:linear-gradient(95deg,#8bf5ab 8%,#4ade80 42%,#4fd8ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">and you\'re off</span>',
-    'hero.desc':'The macOS release is ready. Download, installation, verification, and feedback are all explained here; unverified platforms are never presented as ready.',
+    'hero.desc':'Both macOS and Windows releases are ready. Download, installation, verification, and feedback are all explained here; unverified platforms are never presented as ready.',
     'btn.macos':'macOS','btn.windows':'Windows status','btn.github':'GitHub',
     'dl.title':'Downloads','dl.note':'Everything around the download lives here: installer, integrity check, source, and release status.',
     'dl.macos':'v1.0.31 is the public Apple Silicon build, validated by twenty reliability regressions, an app-signature check, and DMG integrity verification.',
     'dl.mbtn':'Download macOS .dmg',
     'dl.domestic-note':'The official-site link is the default download route. GitHub Release remains an overseas and source-code fallback.','dl.github-backup':'GitHub fallback download',
-    'dl.windows':'Windows code and packaging are ready, but the final .exe still needs a Windows build and verification. No download is offered yet.',
-    'dl.wbtn':'Request beta notice',
+    'dl.windows':'Windows 10+ desktop v1.0.33 is available: card detection, archiving, SHA-256 verification and history. Unsigned exe — on first run choose "More info" → "Run anyway".',
+    'dl.wbtn-cn':'Download Windows .exe (CN direct)',
+    'dl.wbtn-gh':'GitHub fallback download',
     'dl.github':'Browse source, discussions, and future release notes. Use Issues for public feedback.',
     'dl.ghbtn':'Open repository',
     'install.title':'Install Guide','install.note':'If blocked by your system, follow these steps.',
     'install.macos':'Open the .dmg and drag YINGXU to Applications. If Gatekeeper warns you, use System Settings → Privacy & Security → Open Anyway.',
-    'install.windows':'Use a GitHub Issue for public feedback or email luguanlin20050927@iCloud.com for direct contact.',
+    'install.windows':'Run the .exe; if SmartScreen blocks it, choose "More info" → "Run anyway". Verify with: Get-FileHash -Algorithm SHA256 file.exe',
     'install.mit':'Fully open source under MIT. Anyone can audit, modify, and redistribute.',
     'footer.brand':'Smart Media Backup','footer.home':'Back to Home'
   }
